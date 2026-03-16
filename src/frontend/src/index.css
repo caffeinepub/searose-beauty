@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SeaRose Brand Tokens — OKLCH raw L C H values */
+    /* Soft Ivory White #F7F7F7 */
+    --background: 0.977 0 0;
+    /* Dark Charcoal #2C2C2C */
+    --foreground: 0.22 0 0;
+
+    /* Card */
+    --card: 0.977 0 0;
+    --card-foreground: 0.22 0 0;
+
+    /* Popover */
+    --popover: 0.977 0 0;
+    --popover-foreground: 0.22 0 0;
+
+    /* Primary = Dusty Rose #D29492 */
+    --primary: 0.68 0.07 15;
+    --primary-foreground: 0.977 0 0;
+
+    /* Secondary = Sage Green #829E95 */
+    --secondary: 0.64 0.045 170;
+    --secondary-foreground: 0.977 0 0;
+
+    /* Muted */
+    --muted: 0.94 0.01 0;
+    --muted-foreground: 0.5 0.02 0;
+
+    /* Accent = Light Gold #C9A96E */
+    --accent: 0.75 0.08 70;
+    --accent-foreground: 0.22 0 0;
+
+    /* Destructive */
+    --destructive: 0.55 0.22 20;
+    --destructive-foreground: 0.977 0 0;
+
+    --border: 0.9 0.01 0;
+    --input: 0.9 0.01 0;
+    --ring: 0.68 0.07 15;
+
+    --radius: 0.5rem;
+
+    /* Brand custom vars */
+    --sage: 0.64 0.045 170;
+    --rose: 0.68 0.07 15;
+    --gold: 0.75 0.08 70;
+    --ivory: 0.977 0 0;
+    --charcoal: 0.22 0 0;
+
+    /* Chart colors */
+    --chart-1: 0.68 0.07 15;
+    --chart-2: 0.64 0.045 170;
+    --chart-3: 0.75 0.08 70;
+    --chart-4: 0.5 0.02 0;
+    --chart-5: 0.22 0 0;
+
+    /* Sidebar */
+    --sidebar: 0.977 0 0;
+    --sidebar-foreground: 0.22 0 0;
+    --sidebar-primary: 0.68 0.07 15;
+    --sidebar-primary-foreground: 0.977 0 0;
+    --sidebar-accent: 0.94 0.01 0;
+    --sidebar-accent-foreground: 0.22 0 0;
+    --sidebar-border: 0.9 0.01 0;
+    --sidebar-ring: 0.68 0.07 15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+  .text-sage {
+    color: oklch(var(--sage));
+  }
+  .text-rose-brand {
+    color: oklch(var(--rose));
+  }
+  .bg-sage {
+    background-color: oklch(var(--sage) / 0.12);
+  }
+  .bg-sage-solid {
+    background-color: oklch(var(--sage));
+  }
+  .bg-rose-brand {
+    background-color: oklch(var(--rose));
+  }
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+  .gold-underline {
+    position: relative;
+  }
+  .gold-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: oklch(var(--gold));
+  }
+}
+
+@keyframes pulse-whatsapp {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-whatsapp 2s ease-in-out infinite;
+}
