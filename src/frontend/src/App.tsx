@@ -112,7 +112,8 @@ const FALLBACK_PRODUCTS: Product[] = [
     tagline: "With Glycolic Acid",
     price: 145000n,
     category: "Cleanser",
-    image: "/assets/generated/product-facewash.dim_400x400.jpg",
+    image:
+      "/assets/uploads/Create_a_premium_luxury_skincare_brand_identity_fo_delpmaspu-1--1.png",
   },
   {
     name: "Moisturizer Lotion",
@@ -128,7 +129,8 @@ const PRODUCT_IMAGES: Record<string, string> = {
   "Vitamin C Serum": "/assets/generated/product-serum.dim_400x400.jpg",
   "Sunblock SPF 50+": "/assets/generated/product-sunblock.dim_400x400.jpg",
   "Rose Water": "/assets/generated/product-rosewater.dim_400x400.jpg",
-  "Scrub Face Wash": "/assets/generated/product-facewash.dim_400x400.jpg",
+  "Scrub Face Wash":
+    "/assets/uploads/Create_a_premium_luxury_skincare_brand_identity_fo_delpmaspu-1--1.png",
   "Moisturizer Lotion": "/assets/generated/product-lotion.dim_400x400.jpg",
 };
 
